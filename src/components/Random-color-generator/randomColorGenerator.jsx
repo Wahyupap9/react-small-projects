@@ -73,7 +73,11 @@ export default function RandomColorGenerator() {
   }
 
   return (
-    <div className="h-[100vh] flex flex-col" style={{ backgroundColor: color }}>
+    <div
+      id="randomColorGenerator"
+      className="h-[100vh] flex flex-col relative"
+      style={{ backgroundColor: color }}
+    >
       <div className="buttons flex justify-between px-44">
         <button
           onClick={() => {
@@ -106,6 +110,11 @@ export default function RandomColorGenerator() {
           <h1 className="text-8xl font-bold ">{color}</h1>
         </div>
       </div>
+      <button className="absolute bottom-0 right-0 mb-10 mr-16  px-4 py-3 rounded-3xl border-4 border-black text-black">
+        <a href="#starRating">
+          <span className="font-bold">Next :</span> Star Rating
+        </a>
+      </button>
     </div>
   );
 }
